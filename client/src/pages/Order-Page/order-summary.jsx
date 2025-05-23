@@ -47,7 +47,7 @@ const OrderSummary = () => {
     const fetchAddresses = async () => {
       try {
         const response = await axios.get(
-          "https://apnadarzitailoring-5.onrender.com/getAddressByUser",
+          "https://doorstep-backend-service.onrender.com/getAddressByUser",
           { params: { userID } }
         );
 
@@ -105,7 +105,7 @@ const OrderSummary = () => {
 
     try {
       // Step 1: Store Selected Address in DB
-      // const addressresponse = await axios.post("https://apnadarzitailoring-5.onrender.com/api/v1/selectedaddress/save", {
+      // const addressresponse = await axios.post("https://doorstep-backend-service.onrender.com/api/v1/selectedaddress/save", {
       //   userID: userID,
       //   addressID: selectedAddress._id,
       // });
@@ -134,7 +134,7 @@ const OrderSummary = () => {
       console.log("orderData", orderData);
       //
       const res = await axios.post(
-        "https://apnadarzitailoring-5.onrender.com/orders/create",
+        "https://doorstep-backend-service.onrender.com/orders/create",
         orderData
       );
       console.log("res", res);

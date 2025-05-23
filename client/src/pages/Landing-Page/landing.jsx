@@ -33,7 +33,7 @@ const LandingPage = () => {
       const storeUserToken = async () => {
         try {
           const response = await axios.post(
-            "https://apnadarzitailoring-5.onrender.com/api/v1/notification/storeToken",
+            "https://doorstep-backend-service.onrender.com/api/v1/notification/storeToken",
             { userID, token }
           );
           console.log("Token stored:", response.data);

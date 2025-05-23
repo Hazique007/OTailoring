@@ -21,7 +21,7 @@ const Fashion = () => {
   const fetchFashionImages = async () => {
     try {
       const { data } = await axios.get(
-        "https://apnadarzitailoring-5.onrender.com/api/v1/landing/getFashionPageImages"
+        "https://doorstep-backend-service.onrender.com/api/v1/landing/getFashionPageImages"
       );
 
       if (data.status !== "success") {
@@ -50,7 +50,7 @@ const Fashion = () => {
   const handleImageClick = async (gender, category) => {
     try {
       await axios.post(
-        "https://apnadarzitailoring-5.onrender.com/api/v1/stats/trackClick",
+        "https://doorstep-backend-service.onrender.com/api/v1/stats/trackClick",
         {
           gender,
           category,
@@ -95,7 +95,7 @@ const Fashion = () => {
                 {image.fashionImage ? (
                   <img
                     className="aspect-square w-full object-cover rounded-lg"
-                    src={`https://apnadarzitailoring-5.onrender.com/uploads/${image.fashionImage}`}
+                    src={`https://doorstep-backend-service.onrender.com/uploads/${image.fashionImage}`}
                     alt={image.category || "Fashion Item"}
                   />
                 ) : (

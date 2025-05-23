@@ -38,12 +38,12 @@ const ProductPage = () => {
       try {
         setLoading(true);
         const response = await axios.get(
-          `https://apnadarzitailoring-5.onrender.com/api/v1/products/allProducts`,
+          `https://doorstep-backend-service.onrender.com/api/v1/products/allProducts`,
           {
             params: { gender, category, subCategory },
           }
         );
-        // console.log(response);  //https://apnadarzitailoring-5.onrender.com
+        // console.log(response);  //https://doorstep-backend-service.onrender.com
 
         setData(response.data.products);
         // console.log(response.data.products);

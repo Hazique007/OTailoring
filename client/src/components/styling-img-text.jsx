@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const StylingImageText = ({ img, text, onClick, link }) => {
   const imageUrl = img
-    ? `https://apnadarzitailoring-5.onrender.com/uploads/${img}`
+    ? `https://doorstep-backend-service.onrender.com/uploads/${img}`
     : null;
 
   return (

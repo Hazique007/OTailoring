@@ -69,7 +69,7 @@ const AddSubCategory = () => {
 
     try {
       const response = await axios.post(
-        `https://apnadarzitailoring-5.onrender.com/api/v1/products/add-subcategory?userID=${userID}`,
+        `https://doorstep-backend-service.onrender.com/api/v1/products/add-subcategory?userID=${userID}`,
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );

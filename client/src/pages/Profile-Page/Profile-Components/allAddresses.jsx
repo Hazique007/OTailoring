@@ -51,7 +51,7 @@ const AllAddresses = () => {
     const fetchAddresses = async () => {
       try {
         const response = await axios.get(
-          "https://apnadarzitailoring-5.onrender.com/getAddressByUser",
+          "https://doorstep-backend-service.onrender.com/getAddressByUser",
           {
             params: { userID: userID },
           }
@@ -113,7 +113,7 @@ const AllAddresses = () => {
       const updatedAddress = { ...newAddress, userID: currentUserID }; // Add userID to the address object
 
       const response = await fetch(
-        "https://apnadarzitailoring-5.onrender.com/addAddressbyuserID",
+        "https://doorstep-backend-service.onrender.com/addAddressbyuserID",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -146,7 +146,7 @@ const AllAddresses = () => {
 
     try {
       const response = await axios.put(
-        `https://apnadarzitailoring-5.onrender.com/update/${editingAddress._id}`,
+        `https://doorstep-backend-service.onrender.com/update/${editingAddress._id}`,
         editingAddress
       );
       if (response.data) {
@@ -165,7 +165,7 @@ const AllAddresses = () => {
   const handleDeleteAddress = async (id) => {
     try {
       const response = await fetch(
-        `https://apnadarzitailoring-5.onrender.com/delete/${id}`,
+        `https://doorstep-backend-service.onrender.com/delete/${id}`,
         {
           method: "DELETE",
           headers: { "Content-Type": "application/json" },

@@ -16,11 +16,11 @@ const SearchStyle = ({ gender }) => {
 
       const [maleResponse, femaleResponse] = await Promise.all([
         axios.get(
-          "https://apnadarzitailoring-5.onrender.com/api/v1/category/getGenderWiseCategory",
+          "https://doorstep-backend-service.onrender.com/api/v1/category/getGenderWiseCategory",
           { params: { gender: "Male" } }
         ),
         axios.get(
-          "https://apnadarzitailoring-5.onrender.com/api/v1/category/getGenderWiseCategory",
+          "https://doorstep-backend-service.onrender.com/api/v1/category/getGenderWiseCategory",
           { params: { gender: "Female" } }
         ),
       ]);
@@ -71,7 +71,7 @@ const SearchStyle = ({ gender }) => {
       const handleImageClick = async (gender, category, subCategory) => {
         try {
           await axios.post(
-            "https://apnadarzitailoring-5.onrender.com/api/v1/stats/trackClick",
+            "https://doorstep-backend-service.onrender.com/api/v1/stats/trackClick",
             {
               gender,
               category,

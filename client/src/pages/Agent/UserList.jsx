@@ -17,7 +17,7 @@ const UserList = () => {
     try {
       setIsLoading(true);
       const response = await axios.get(
-        "https://apnadarzitailoring-5.onrender.com/orders/grouped",
+        "https://doorstep-backend-service.onrender.com/orders/grouped",
         {
           params: { page, limit: 10 },
         }
@@ -43,7 +43,7 @@ const UserList = () => {
   const updateOrderStatus = async (orderID, userID) => {
     try {
       const response = await axios.post(
-        "https://apnadarzitailoring-5.onrender.com/agent/updateagentorder",
+        "https://doorstep-backend-service.onrender.com/agent/updateagentorder",
         {},
         { params: { userID, orderID } }
       );

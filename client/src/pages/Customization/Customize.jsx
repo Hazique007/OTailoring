@@ -122,7 +122,7 @@ const Customize = () => {
             className="relative w-[320px] h-[282px] sm:w-full sm:h-[350px] overflow-hidden rounded-[10px] px-4"
           >
             <img
-              src={`https://apnadarzitailoring-5.onrender.com/uploads/${productItem.images[currentImageIndex]}`}
+              src={`https://doorstep-backend-service.onrender.com/uploads/${productItem.images[currentImageIndex]}`}
               alt="Customize clothing"
               className="w-full h-full object-fit rounded-[20px]"
             />

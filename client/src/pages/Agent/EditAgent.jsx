@@ -29,7 +29,7 @@ const EditAgent = () => {
   const getAddress = async () => {
     try {
       const response = await axios.get(
-        `https://apnadarzitailoring-5.onrender.com/agent/getAddressByID?addressID=${userAddressId}`
+        `https://doorstep-backend-service.onrender.com/agent/getAddressByID?addressID=${userAddressId}`
       );
       console.log(response.data);
       setuserAddress(response.data?.address);
@@ -59,12 +59,12 @@ const EditAgent = () => {
       setIsLoading(true);
 
       const orderResponse = await axios.get(
-        "https://apnadarzitailoring-5.onrender.com/orders/getOrderbyID",
+        "https://doorstep-backend-service.onrender.com/orders/getOrderbyID",
         { params: { orderID } }
       );
 
       const agentResponse = await axios.get(
-        "https://apnadarzitailoring-5.onrender.com/agent/agentorder",
+        "https://doorstep-backend-service.onrender.com/agent/agentorder",
         { params: { orderID, userID } }
       );
 
@@ -113,7 +113,7 @@ const EditAgent = () => {
       );
 
       const response = await axios.post(
-        "https://apnadarzitailoring-5.onrender.com/agent/updateagentorder",
+        "https://doorstep-backend-service.onrender.com/agent/updateagentorder",
         {
           updateData: orderData.status,
           status: allCompleted ? "done" : "pending",

@@ -63,7 +63,7 @@ const Pickup = () => {
   const fetchAddresses = async () => {
     try {
       const response = await fetch(
-        `https://apnadarzitailoring-5.onrender.com/getAddressByUser?userID=${localStorage.getItem(
+        `https://doorstep-backend-service.onrender.com/getAddressByUser?userID=${localStorage.getItem(
           "userID"
         )}`
       );
@@ -90,7 +90,7 @@ const Pickup = () => {
 
     try {
       const response = await fetch(
-        "https://apnadarzitailoring-5.onrender.com/addAddressbyuserID",
+        "https://doorstep-backend-service.onrender.com/addAddressbyuserID",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

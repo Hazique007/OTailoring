@@ -25,7 +25,7 @@ const ProfilePage = () => {
     });
   }, []);
 
-  const API_BASE_URL = "https://apnadarzitailoring-5.onrender.com";
+  const API_BASE_URL = "https://doorstep-backend-service.onrender.com";
   const userID = localStorage.getItem("userID");
   const [loading, setLoading] = useState(true);
   const [profile, setProfile] = useState(null);
@@ -34,7 +34,7 @@ const ProfilePage = () => {
   const navigate = useNavigate();
   const getRole = async () => {
     const response = await axios.get(
-      "https://apnadarzitailoring-5.onrender.com/api/getUserDetails",
+      "https://doorstep-backend-service.onrender.com/api/getUserDetails",
       {
         params: { userID: userID },
       }
